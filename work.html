@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work | Shivam Joshi</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Case studies, mock dashboard gallery, tech stack tools, and verified professional certifications of Shivam Joshi.">
+    <meta name="author" content="Shivam Joshi">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/work.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon"><i class="fa-solid fa-chart-line"></i></span>
+                <span class="logo-text">Shivam<span>Joshi</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="work.html" class="nav-link active">Work</a></li>
+                    <li><a href="insights.html" class="nav-link">Insights</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <a href="assets/resume/Shivam_Joshi_Resume.pdf" target="_blank" class="btn btn-outline btn-sm nav-cta">Resume</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-bottom: 60px;">
+        <!-- Case Studies Section -->
+        <section id="case-studies" class="case-studies-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Case Studies</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Real-world tracking architectures and implementations delivered for clients.</p>
+                </div>
+                
+                <div class="case-studies-grid">
+                    <!-- Case Study 1 -->
+                    <div class="case-study-card glass scroll-reveal">
+                        <div class="case-study-header">
+                            <span class="case-study-tag"><i class="fa-solid fa-server"></i> Server-Side GTM</span>
+                            <h3>Server-Side GTM Migration for an E-Commerce Brand</h3>
+                            <button class="case-study-toggle-btn" aria-expanded="false" aria-controls="case-study-1-tray" aria-label="Expand case study">
+                                <span class="btn-text">View Case Study</span>
+                                <span class="btn-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                            </button>
+                        </div>
+                        <div class="case-study-details-tray" id="case-study-1-tray">
+                            <div class="tray-content">
+                                <div class="tray-item">
+                                    <h4>Problem Statement</h4>
+                                    <p>Client was losing significant conversion data due to third-party cookie restrictions and ad blockers affecting client-side tracking accuracy.</p>
+                                </div>
+                                <div class="tray-item">
+                                    <h4>Solution Implemented</h4>
+                                    <p>Architected and deployed a server-side GTM container hosted on Google Cloud. Migrated GA4 and Facebook Pixel tags from client-side to server-side. Configured first-party cookies with a custom domain to extend cookie lifetime. Implemented Google Consent Mode v2 integrated with OneTrust CMP via GTM consent triggers.</p>
+                                </div>
+                                <div class="tray-item">
+                                    <h4>Outcome</h4>
+                                    <p class="outcome-success">Improved data completeness, reduced tag-related page load impact, and achieved full GDPR compliance for EU traffic.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Case Study 2 -->
+                    <div class="case-study-card glass scroll-reveal">
+                        <div class="case-study-header">
+                            <span class="case-study-tag"><i class="fa-solid fa-database"></i> Adobe WebSDK & AEP</span>
+                            <h3>Adobe Analytics and AEP Implementation for a Financial Services Client</h3>
+                            <button class="case-study-toggle-btn" aria-expanded="false" aria-controls="case-study-2-tray" aria-label="Expand case study">
+                                <span class="btn-text">View Case Study</span>
+                                <span class="btn-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                            </button>
+                        </div>
+                        <div class="case-study-details-tray" id="case-study-2-tray">
+                            <div class="tray-content">
+                                <div class="tray-item">
+                                    <h4>Problem Statement</h4>
+                                    <p>Client had fragmented data collection across web and mobile with no unified customer view and inconsistent event naming across platforms.</p>
+                                </div>
+                                <div class="tray-item">
+                                    <h4>Solution Implemented</h4>
+                                    <p>Designed XDM schemas in Adobe Experience Platform to standardise event taxonomy across web and iOS/Android apps. Implemented tracking via WebSDK on web and MobileSDK on native apps. Configured Edge Network datastreams, identity stitching using ECID, and Destinations for downstream activation. Built Adobe Analytics Workspace reports with calculated metrics and scheduled delivery.</p>
+                                </div>
+                                <div class="tray-item">
+                                    <h4>Outcome</h4>
+                                    <p class="outcome-success">Unified cross-platform customer data, eliminated naming inconsistencies, and delivered a single source of truth for marketing and product teams.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 3 -->
+                    <div class="case-study-card glass scroll-reveal">
+                        <div class="case-study-header">
+                            <span class="case-study-tag"><i class="fa-solid fa-chart-line"></i> GA4 Migration</span>
+                            <h3>Universal Analytics to GA4 Migration and Reporting Rebuild</h3>
+                            <button class="case-study-toggle-btn" aria-expanded="false" aria-controls="case-study-3-tray" aria-label="Expand case study">
+                                <span class="btn-text">View Case Study</span>
+                                <span class="btn-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                            </button>
+                        </div>
+                        <div class="case-study-details-tray" id="case-study-3-tray">
+                            <div class="tray-content">
+                                <div class="tray-item">
+                                    <h4>Problem Statement</h4>
+                                    <p>Client faced the UA sunset deadline with no GA4 implementation in place and stakeholders relying on UA custom reports that had no GA4 equivalent.</p>
+                                </div>
+                                <div class="tray-item">
+                                    <h4>Solution Implemented</h4>
+                                    <p>Conducted a full audit of existing UA tracking. Rebuilt event taxonomy in GA4 using an event-based model. Configured GA4 via GTM with custom dimensions, metrics, and enhanced eCommerce. Rebuilt all key reports as GA4 Explorations including funnel analysis, path analysis, and cohort reports. Configured GA4 audiences for Google Ads remarketing.</p>
+                                </div>
+                                <div class="tray-item">
+                                    <h4>Outcome</h4>
+                                    <p class="outcome-success">Zero reporting downtime during the UA sunset transition. Stakeholders onboarded to GA4 dashboards with equivalent and improved visibility compared to UA.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Gallery Section -->
+        <section id="dashboards" class="dashboards-section" style="padding-top: 20px;">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Dashboard Gallery</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Visual performance report suites built to surface conversion insights.</p>
+                </div>
+                
+                <div class="dashboards-grid">
+                    <!-- Looker Studio Card -->
+                    <div class="dashboard-card glass scroll-reveal">
+                        <div class="dashboard-img-area">
+                            <!-- SVG Line Chart Mockup -->
+                            <svg class="mock-chart-svg line-chart-mock" viewBox="0 0 300 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <filter id="glow-teal-chart" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="4" result="blur"/>
+                                        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                                    </filter>
+                                </defs>
+                                <!-- Grid Lines -->
+                                <line x1="20" y1="20" x2="280" y2="20" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                                <line x1="20" y1="50" x2="280" y2="50" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                                <line x1="20" y1="80" x2="280" y2="80" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                                <line x1="20" y1="110" x2="280" y2="110" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                                
+                                <!-- Axes -->
+                                <line x1="20" y1="10" x2="20" y2="120" stroke="var(--border-color)" stroke-width="1"/>
+                                <line x1="20" y1="120" x2="280" y2="120" stroke="var(--border-color)" stroke-width="1"/>
+                                
+                                <!-- Trend Line 1 (Teal/Cyan) -->
+                                <path d="M 20 100 Q 60 40 100 80 T 180 50 T 260 20" stroke="var(--primary)" stroke-width="3" fill="none" filter="url(#glow-teal-chart)"/>
+                                <!-- Trend Line 2 (Purple) -->
+                                <path d="M 20 115 Q 60 90 100 110 T 180 80 T 260 60" stroke="#f857a6" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
+                                
+                                <!-- Data Nodes -->
+                                <circle cx="100" cy="80" r="4" fill="var(--primary)"/>
+                                <circle cx="180" cy="50" r="4" fill="var(--primary)"/>
+                                <circle cx="260" cy="20" r="4" fill="var(--primary)"/>
+                            </svg>
+                            <div class="watermark-overlay">
+                                <span>Available on request</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="tool-badge-row">
+                                <span class="tool-badge looker">Looker Studio</span>
+                            </div>
+                            <h3>E-Commerce Marketing Performance Dashboard</h3>
+                            <p>Connected GA4, Google Ads, and Search Console data sources. Built blended views showing channel-level ROAS, conversion funnels, and weekly trend comparisons with automated refresh.</p>
+                        </div>
+                    </div>
+
+                    <!-- Adobe Workspace Card -->
+                    <div class="dashboard-card glass scroll-reveal">
+                        <div class="dashboard-img-area">
+                            <!-- SVG Funnel Mockup -->
+                            <svg class="mock-chart-svg funnel-chart-mock" viewBox="0 0 300 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Funnel Bars -->
+                                <!-- Step 1 -->
+                                <path d="M 40 20 H 260 L 230 45 H 70 Z" fill="rgba(248, 87, 166, 0.85)" stroke="rgba(248, 87, 166, 0.4)" stroke-width="1"/>
+                                <text x="150" y="36" text-anchor="middle" fill="#ffffff" font-size="8" font-family="var(--font-heading)" font-weight="600">100% - Homepage Visits</text>
+                                
+                                <!-- Step 2 -->
+                                <path d="M 73 50 H 227 L 200 75 H 100 Z" fill="rgba(248, 87, 166, 0.65)" stroke="rgba(248, 87, 166, 0.4)" stroke-width="1"/>
+                                <text x="150" y="66" text-anchor="middle" fill="#ffffff" font-size="8" font-family="var(--font-heading)" font-weight="600">58% - Product Detail Views</text>
+                                
+                                <!-- Step 3 -->
+                                <path d="M 103 80 H 197 L 175 105 H 125 Z" fill="rgba(248, 87, 166, 0.45)" stroke="rgba(248, 87, 166, 0.4)" stroke-width="1"/>
+                                <text x="150" y="96" text-anchor="middle" fill="#ffffff" font-size="8" font-family="var(--font-heading)" font-weight="600">21% - Add to Cart</text>
+                                
+                                <!-- Step 4 -->
+                                <rect x="127" y="110" width="46" height="20" rx="3" fill="rgba(248, 87, 166, 0.25)" stroke="rgba(248, 87, 166, 0.4)" stroke-width="1"/>
+                                <text x="150" y="122" text-anchor="middle" fill="#ffffff" font-size="8" font-family="var(--font-heading)" font-weight="bold">3.2% - Purchase</text>
+                            </svg>
+                            <div class="watermark-overlay">
+                                <span>Available on request</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="tool-badge-row">
+                                <span class="tool-badge adobe-badge">Adobe Analytics Workspace</span>
+                            </div>
+                            <h3>Adobe Analytics Executive Report Suite</h3>
+                            <p>Built scheduled workspace reports with segment-stacked visualisations, calculated metrics for bounce rate and engagement rate, and fallout analysis across key conversion paths.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tableau Card -->
+                    <div class="dashboard-card glass scroll-reveal">
+                        <div class="dashboard-img-area">
+                            <!-- SVG Scatter Plot / Dual Axis Mockup -->
+                            <svg class="mock-chart-svg scatter-chart-mock" viewBox="0 0 300 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Axis -->
+                                <line x1="30" y1="20" x2="30" y2="120" stroke="var(--border-color)" stroke-width="1"/>
+                                <line x1="30" y1="120" x2="270" y2="120" stroke="var(--border-color)" stroke-width="1"/>
+                                
+                                <!-- Dual axis right line -->
+                                <line x1="270" y1="20" x2="270" y2="120" stroke="var(--border-color)" stroke-width="1" stroke-dasharray="2,2"/>
+                                
+                                <!-- Scatter Points -->
+                                <circle cx="60" cy="50" r="6" fill="#00cdac" opacity="0.8"/>
+                                <circle cx="100" cy="40" r="8" fill="#00cdac" opacity="0.8"/>
+                                <circle cx="140" cy="30" r="7" fill="#00cdac" opacity="0.8"/>
+                                
+                                <circle cx="80" cy="90" r="5" fill="#4facfe" opacity="0.8"/>
+                                <circle cx="120" cy="70" r="9" fill="#4facfe" opacity="0.8"/>
+                                <circle cx="190" cy="50" r="6" fill="#4facfe" opacity="0.8"/>
+                                
+                                <circle cx="160" cy="80" r="7" fill="#a18cd1" opacity="0.8"/>
+                                <circle cx="220" cy="60" r="8" fill="#a18cd1" opacity="0.8"/>
+                                <circle cx="250" cy="45" r="10" fill="#a18cd1" opacity="0.8"/>
+
+                                <!-- Trend line -->
+                                <line x1="30" y1="110" x2="270" y2="35" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="4,2"/>
+                            </svg>
+                            <div class="watermark-overlay">
+                                <span>Available on request</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="tool-badge-row">
+                                <span class="tool-badge tableau-badge">Tableau</span>
+                            </div>
+                            <h3>Multi-Channel Attribution Dashboard</h3>
+                            <p>Designed a marketing attribution dashboard connecting backend CRM and analytics data. Applied advanced calculated fields to compare last-click versus linear attribution models across paid and organic channels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools & Tech Stack Section -->
+        <section id="tech-stack" class="tech-stack-section" style="padding-top: 20px;">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Tools & Tech Stack</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Core specialized toolset and programming languages leveraged across tagging implementations.</p>
+                </div>
+                
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-card glass scroll-reveal">
+                        <div class="tech-stack-icon"><i class="fa-solid fa-tags"></i></div>
+                        <h4>Google Tag Manager</h4>
+                        <span>Client & Server-Side</span>
+                    </div>
+                    <div class="tech-stack-card glass scroll-reveal">
+                        <div class="tech-stack-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h4>Google Analytics 4</h4>
+                        <span>Events & Audience setups</span>
+                    </div>
+                    <div class="tech-stack-card glass scroll-reveal">
+                        <div class="tech-stack-icon"><i class="fa-solid fa-cubes"></i></div>
+                        <h4>Adobe Experience</h4>
+                        <span>AEP Schemas & Edge</span>
+                    </div>
+                    <div class="tech-stack-card glass scroll-reveal">
+                        <div class="tech-stack-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h4>Adobe Analytics</h4>
+                        <span>WebSDK & Launch tags</span>
+                    </div>
+                    <div class="tech-stack-card glass scroll-reveal">
+                        <div class="tech-stack-icon"><i class="fa-solid fa-chart-column"></i></div>
+                        <h4>Tableau</h4>
+                        <span>Reporting & blending</span>
+                    </div>
+                    <div class="tech-stack-card glass scroll-reveal">
+                        <div class="tech-stack-icon"><i class="fa-solid fa-chart-bar"></i></div>
+                        <h4>Power BI</h4>
+                        <span>Dashboards & DAX</span>
+                    </div>
+                    <div class="tech-stack-card glass scroll-reveal">
+                        <div class="tech-stack-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h4>OneTrust / CookiePro</h4>
+                        <span>GDPR Consent Mode v2</span>
+                    </div>
+                    <div class="tech-stack-card glass scroll-reveal">
+                        <div class="tech-stack-icon"><i class="fa-solid fa-code"></i></div>
+                        <h4>JavaScript / SQL</h4>
+                        <span>Custom tags & scripting</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications-section" style="padding-top: 20px;">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Professional Credentials</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Verified industry certifications validating technical knowledge across analytical ecosystems.</p>
+                </div>
+                
+                <div class="certifications-grid">
+                    <!-- Cert 1 -->
+                    <div class="cert-card glass scroll-reveal">
+                        <div class="cert-badge Adobe"><i class="fa-solid fa-code"></i></div>
+                        <div class="cert-content">
+                            <h3>Adobe Certified Expert</h3>
+                            <span class="cert-title">Adobe Customer Journey Analytics Developer</span>
+                            <span class="cert-org">Adobe</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Cert 2 -->
+                    <div class="cert-card glass scroll-reveal">
+                        <div class="cert-badge Adobe"><i class="fa-solid fa-cubes"></i></div>
+                        <div class="cert-content">
+                            <h3>Adobe Certified Professional</h3>
+                            <span class="cert-title">Adobe Analytics Developer</span>
+                            <span class="cert-org">Adobe</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Cert 3 -->
+                    <div class="cert-card glass scroll-reveal">
+                        <div class="cert-badge Microsoft"><i class="fa-solid fa-chart-column"></i></div>
+                        <div class="cert-content">
+                            <h3>Power BI Data Analyst Associate</h3>
+                            <span class="cert-title">Microsoft PL-300 Certification</span>
+                            <span class="cert-org">Microsoft</span>
+                        </div>
+                    </div>
+
+                    <!-- Cert 4 -->
+                    <div class="cert-card glass scroll-reveal">
+                        <div class="cert-badge Google"><i class="fa-brands fa-google"></i></div>
+                        <div class="cert-content">
+                            <h3>Google Analytics Certification</h3>
+                            <span class="cert-title">Google Analytics 4 (GA4) Individual Qualification</span>
+                            <span class="cert-org">Google</span>
+                        </div>
+                    </div>
+
+                    <!-- Cert 5 -->
+                    <div class="cert-card glass scroll-reveal">
+                        <div class="cert-badge Tableau"><i class="fa-solid fa-table-cells-large"></i></div>
+                        <div class="cert-content">
+                            <h3>Tableau Desktop Foundations</h3>
+                            <span class="cert-title">Verified Tableau Desktop Skills Badge</span>
+                            <span class="cert-org">Tableau Software</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="index.html" class="footer-logo">Shivam<span>Joshi</span></a>
+                <p>Ensuring data integrity and compliance in every event tracked.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="work.html">Work</a>
+                    <a href="insights.html">Insights</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p class="copyright">&copy; <span id="current-year">2026</span> Shivam Joshi. All rights reserved. Crafted with care.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/work.js"></script>
+</body>
+</html>

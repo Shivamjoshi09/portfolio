@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Shivam Joshi</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Extended professional biography, skills matrix, career, and education timeline of Shivam Joshi, Senior Data Analyst.">
+    <meta name="author" content="Shivam Joshi">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon"><i class="fa-solid fa-chart-line"></i></span>
+                <span class="logo-text">Shivam<span>Joshi</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="work.html" class="nav-link">Work</a></li>
+                    <li><a href="insights.html" class="nav-link">Insights</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <a href="assets/resume/Shivam_Joshi_Resume.pdf" target="_blank" class="btn btn-outline btn-sm nav-cta">Resume</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-bottom: 60px;">
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Bridging the gap between software engineering, data collection, and compliance.</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-img-container scroll-reveal left">
+                        <div class="about-img-wrapper">
+                            <img src="assets/images/profile.jpg" alt="Shivam Joshi" class="about-img">
+                            <div class="img-border-decor"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-details scroll-reveal right">
+                        <h3>Hi, I'm Shivam Joshi</h3>
+                        <p>
+                            I am a Google and Adobe certified analyst who thrives on setting up accurate, high-performance tracking. I have a strong educational background with a Bachelor's in <strong>Computer Science</strong> (CGPA 9.6/10) and am currently pursuing an <strong>MBA in Data Science and Artificial Intelligence</strong>.
+                        </p>
+                        <p>
+                            My approach combining data engineering and analytics allows me to architect robust tracking pipelines. I build reliable setups that respect user consent policies, load quickly, and supply high-quality clean datasets to visual dashboards.
+                        </p>
+                        <div class="about-badges">
+                            <div class="about-badge-item">
+                                <i class="fa-solid fa-server"></i>
+                                <span>Server-Side Tracking</span>
+                            </div>
+                            <div class="about-badge-item">
+                                <i class="fa-solid fa-user-shield"></i>
+                                <span>Consent Mode v2</span>
+                            </div>
+                            <div class="about-badge-item">
+                                <i class="fa-solid fa-chart-pie"></i>
+                                <span>BI & Dashboarding</span>
+                            </div>
+                            <div class="about-badge-item">
+                                <i class="fa-solid fa-database"></i>
+                                <span>Adobe WebSDK / AEP</span>
+                            </div>
+                        </div>
+                        <div class="about-info-list" style="margin-bottom: 30px;">
+                            <div class="info-item">
+                                <span class="info-label">Degree:</span>
+                                <span class="info-value">MBA (Data Science & AI) & B.Eng (Computer Science)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Location:</span>
+                                <span class="info-value">Mohali, Punjab, India</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email:</span>
+                                <span class="info-value"><a href="mailto:shivamjoshi.joshi9@gmail.com">shivamjoshi.joshi9@gmail.com</a></span>
+                            </div>
+                        </div>
+                        <a href="assets/resume/Shivam_Joshi_Resume.pdf" target="_blank" class="btn btn-primary"><i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i> Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Matrix Section -->
+        <section id="skills" class="skills-section" style="padding-top: 20px;">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Skills Matrix</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Deep technical expertise mapping to data pipelines, privacy regulations, and visualization tools.</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Column 1: Analytics & Tracking -->
+                    <div class="skills-card glass scroll-reveal">
+                        <div class="skills-card-icon"><i class="fa-solid fa-crosshairs"></i></div>
+                        <h3>Analytics & Tracking</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-name-percent"><span>Google Tag Manager (Client & Server-Side)</span><span>95%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent"><span>Google Analytics 4 (GA4)</span><span>92%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 92%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent"><span>Adobe Analytics & Launch</span><span>88%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent"><span>Adobe Experience Platform (AEP) & WebSDK</span><span>85%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Privacy & Consent -->
+                    <div class="skills-card glass scroll-reveal">
+                        <div class="skills-card-icon"><i class="fa-solid fa-lock"></i></div>
+                        <h3>Privacy & Consent</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-name-percent"><span>Google Consent Mode v2</span><span>95%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent"><span>OneTrust & CookiePro CMP</span><span>90%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent"><span>Adobe Consent Framework</span><span>85%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent"><span>GDPR/CCPA Architectures</span><span>88%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Data & Visualization -->
+                    <div class="skills-card glass scroll-reveal">
+                        <div class="skills-card-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3>BI & Visualization</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-name-percent"><span>Tableau</span><span>90%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent"><span>Power BI</span><span>85%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent"><span>Looker Studio</span><span>88%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent"><span>Adobe Analytics Workspace</span><span>86%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 86%"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Programming & Dev -->
+                    <div class="skills-card glass scroll-reveal">
+                        <div class="skills-card-icon"><i class="fa-solid fa-code"></i></div>
+                        <h3>Programming & Architecture</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-name-percent"><span>JavaScript (Custom tagging, variables)</span><span>85%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent"><span>SQL (Data manipulation & extracts)</span><span>80%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent"><span>Python (Analytics & automation)</span><span>75%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent"><span>Data Layer & Schema Design (XDM)</span><span>90%</span></div>
+                                <div class="skill-progress-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience" class="experience-section" style="padding-top: 20px;">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Career & Education Journey</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Chronological timeline of my professional growth, academic milestones, and engineering roles.</p>
+                </div>
+                
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item left scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Jan 2025 - Jul 2027</div>
+                        <div class="timeline-content glass">
+                            <h3>MBA in Data Science & Artificial Intelligence</h3>
+                            <span class="timeline-institution">Chitkara University, Punjab</span>
+                            <p>Focusing on advanced machine learning algorithms, strategic analytics management, AI applications, and integrating business decisions with raw data systems.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item right scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Sep 2023 - Present</div>
+                        <div class="timeline-content glass">
+                            <h3>Senior Data Analyst</h3>
+                            <span class="timeline-institution">Growth Natives</span>
+                            <span class="timeline-progression">Promoted: Intern &rarr; Data Analyst &rarr; Senior Data Analyst</span>
+                            <div class="timeline-details">
+                                <ul>
+                                    <li><strong>Tag Management (GTM):</strong> Deployed client and server-side GTM containers. Migrated setups to sGTM to improve client-side performance and ensure cookies bypass third-party browser restrictions.</li>
+                                    <li><strong>GA4 Deployment:</strong> Built custom event schemas, custom dimensions/metrics, and handled migrations from Universal Analytics. Configured advanced Funnel & Path Explorations.</li>
+                                    <li><strong>Adobe Analytics & AEP:</strong> Deployed WebSDK/MobileSDK tags, configured Edge Network datastreams, XDM schemas, and visual workspaces.</li>
+                                    <li><strong>Consent & Privacy:</strong> Implemented Google Consent Mode v2 via GTM consent triggers, integrating with OneTrust and CookiePro.</li>
+                                    <li><strong>Dashboarding:</strong> Built automated, live reports in Tableau, Power BI, and Looker Studio. Led Tableau training for client teams.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item left scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Aug 2019 - Aug 2023</div>
+                        <div class="timeline-content glass">
+                            <h3>Bachelor of Engineering in Computer Science</h3>
+                            <span class="timeline-institution">Chitkara University, Himachal Pradesh</span>
+                            <span class="timeline-metric"><i class="fa-solid fa-chart-line"></i> CGPA: 9.6 / 10</span>
+                            <p>Acquired foundations in software engineering, database management systems (SQL), data structures and algorithms, and web programming, forming a solid base for advanced analytical systems.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item right scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Sep 2022 - Jun 2023</div>
+                        <div class="timeline-content glass">
+                            <h3>Trainee Analyst</h3>
+                            <span class="timeline-institution">WNS Global Services</span>
+                            <div class="timeline-details">
+                                <ul>
+                                    <li>Conducted transaction and customer data quality assessments for downstream analytical models.</li>
+                                    <li>Identified key demographic segments and built interactive Tableau dashboards.</li>
+                                    <li>Translated complex user requirements into structured technical tagging assignments.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 5 -->
+                    <div class="timeline-item left scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Jan 2022 - Apr 2022</div>
+                        <div class="timeline-content glass">
+                            <h3>Trainee</h3>
+                            <span class="timeline-institution">HighRadius</span>
+                            <p>Acquired practical exposure to enterprise data pipelines, automated financial workflows, and database querying schemas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="index.html" class="footer-logo">Shivam<span>Joshi</span></a>
+                <p>Ensuring data integrity and compliance in every event tracked.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="work.html">Work</a>
+                    <a href="insights.html">Insights</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p class="copyright">&copy; <span id="current-year">2026</span> Shivam Joshi. All rights reserved. Crafted with care.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/global.js"></script>
+</body>
+</html>

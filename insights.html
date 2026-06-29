@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights & Thought Leadership | Shivam Joshi</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Technical deep dives, analytics articles, and guidelines on GTM, Adobe AEP, GA4, and Consent privacy.">
+    <meta name="author" content="Shivam Joshi">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/insights.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon"><i class="fa-solid fa-chart-line"></i></span>
+                <span class="logo-text">Shivam<span>Joshi</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="work.html" class="nav-link">Work</a></li>
+                    <li><a href="insights.html" class="nav-link active">Insights</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <a href="assets/resume/Shivam_Joshi_Resume.pdf" target="_blank" class="btn btn-outline btn-sm nav-cta">Resume</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-bottom: 80px;">
+        <!-- Insights Section -->
+        <section id="insights" class="insights-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Insights</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Deep dives into tag architecture, cookie policies, and data layer engineering.</p>
+                </div>
+
+                <!-- Filter Bar -->
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">All Topics</button>
+                    <button class="filter-btn" data-filter="gtm">GTM</button>
+                    <button class="filter-btn" data-filter="adobe">Adobe AEP</button>
+                    <button class="filter-btn" data-filter="ga4">GA4</button>
+                    <button class="filter-btn" data-filter="privacy">Privacy & Consent</button>
+                </div>
+                
+                <div class="insights-grid">
+                    <!-- Article 1 -->
+                    <article class="insight-card glass scroll-reveal" data-category="gtm">
+                        <div class="insight-content">
+                            <span class="insight-category">GTM</span>
+                            <h3>Why We Migrated from Client-Side to Server-Side GTM</h3>
+                            <p>Client-side tracking is losing the battle against ad blockers and browser privacy updates. Here is what changes when you move to sGTM and what to watch out for during migration.</p>
+                            <a href="insights/sgtm-migration.html" class="insight-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="insight-card glass scroll-reveal" data-category="privacy">
+                        <div class="insight-content">
+                            <span class="insight-category">Privacy and Consent</span>
+                            <h3>Implementing Consent Mode v2 Without Breaking Your GA4 Data</h3>
+                            <p>Consent Mode v2 is now mandatory for EU traffic using Google Ads. This walkthrough covers the GTM setup, OneTrust integration, and how to validate that modelled conversions are working correctly.</p>
+                            <a href="insights/consent-mode-v2.html" class="insight-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="insight-card glass scroll-reveal" data-category="adobe">
+                        <div class="insight-content">
+                            <span class="insight-category">Adobe AEP</span>
+                            <h3>XDM Schema Design Mistakes to Avoid in Adobe AEP</h3>
+                            <p>A poorly designed XDM schema causes problems that are expensive to fix later. These are the most common mistakes seen during AEP implementations and how to avoid them from the start.</p>
+                            <a href="insights/xdm-schema-design.html" class="insight-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="index.html" class="footer-logo">Shivam<span>Joshi</span></a>
+                <p>Ensuring data integrity and compliance in every event tracked.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="work.html">Work</a>
+                    <a href="insights.html">Insights</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p class="copyright">&copy; <span id="current-year">2026</span> Shivam Joshi. All rights reserved. Crafted with care.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/insights.js"></script>
+</body>
+</html>
