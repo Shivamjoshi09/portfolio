@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XDM Schema Design Mistakes to Avoid in Adobe AEP | Shivam Joshi</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Best practices and schemas design mistakes to avoid when architecting Experience Data Model (XDM) in Adobe Experience Platform.">
+    <meta name="author" content="Shivam Joshi">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/insights.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <span class="logo-icon"><i class="fa-solid fa-chart-line"></i></span>
+                <span class="logo-text">Shivam<span>Joshi</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../about.html" class="nav-link">About</a></li>
+                    <li><a href="../work.html" class="nav-link">Work</a></li>
+                    <li><a href="../insights.html" class="nav-link">Insights</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <a href="../assets/resume/Shivam_Joshi_Resume.pdf" target="_blank" class="btn btn-outline btn-sm nav-cta">Resume</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-bottom: 80px; padding-top: 40px;">
+        <article class="container" style="max-width: 800px;">
+            <!-- Breadcrumbs / Back button -->
+            <div style="margin-bottom: 30px;">
+                <a href="../insights.html" class="btn btn-outline btn-sm" style="gap: 8px;"><i class="fa-solid fa-arrow-left"></i> Back to Insights</a>
+            </div>
+            
+            <!-- Article Header -->
+            <div class="section-header" style="margin-bottom: 40px; text-align: left;">
+                <span class="insight-category" style="font-size: 12px; margin-bottom: 15px;">Adobe AEP</span>
+                <h1 style="font-family: var(--font-heading); font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 15px;">XDM Schema Design Mistakes to Avoid in Adobe AEP</h1>
+                <p style="color: var(--text-muted); font-size: 14px;"><i class="fa-solid fa-calendar-days" style="margin-right: 6px;"></i> Published June 2026 &nbsp;|&nbsp; <i class="fa-solid fa-clock" style="margin-right: 6px;"></i> 4 Min Read</p>
+            </div>
+
+            <!-- Content Area -->
+            <div class="glass" style="padding: 40px; line-height: 1.8; color: var(--text-muted); font-size: 16px;">
+                <p style="margin-bottom: 20px;">
+                    Designing the Experience Data Model (XDM) schema is the foundational phase of implementing Adobe Experience Platform (AEP) or Adobe Experience Edge. A poorly designed schema leads to downstream activation errors and requires complex migrations that are expensive to fix.
+                </p>
+                <h3 style="font-family: var(--font-heading); color: var(--text-main); font-size: 20px; font-weight: 700; margin: 30px 0 15px;">Mistake 1: Treating XDM like a Relational Database Table</h3>
+                <p style="margin-bottom: 20px;">
+                    XDM schemas are hierarchical JSON structures, not flat relational tables. Designing with heavy nesting or trying to normalize schemas by separating objects too much leads to execution issues when trying to build unified profiles. Keep event context grouped within logical object hierarchies (e.g. <code>commerce</code>, <code>web</code>, <code>placeContext</code>).
+                </p>
+                <h3 style="font-family: var(--font-heading); color: var(--text-main); font-size: 20px; font-weight: 700; margin: 30px 0 15px;">Mistake 2: Ignoring Profile Enabled Flags</h3>
+                <p style="margin-bottom: 20px;">
+                    Not all dataset schemas need to be profile-enabled. Enabling too many detailed, high-volume event datasets for Real-Time Customer Profile can bloat profile storage and degrade query speeds.
+                </p>
+                <h3 style="font-family: var(--font-heading); color: var(--text-main); font-size: 20px; font-weight: 700; margin: 30px 0 15px;">Mistake 3: Inconsistent Identity Maps</h3>
+                <p>
+                    Failing to define primary identity fields (like email or ECID) inside your Identity Map config prevents datasets from merging profiles correctly. Ensuring a consistent, clean schema structure from day one is key to delivering a unified customer view.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="../index.html" class="footer-logo">Shivam<span>Joshi</span></a>
+                <p>Ensuring data integrity and compliance in every event tracked.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../about.html">About</a>
+                    <a href="../work.html">Work</a>
+                    <a href="../insights.html">Insights</a>
+                    <a href="../contact.html">Contact</a>
+                </div>
+                <p class="copyright">&copy; <span id="current-year">2026</span> Shivam Joshi. All rights reserved. Crafted with care.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/global.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why We Migrated from Client-Side to Server-Side GTM | Shivam Joshi</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="An in-depth article on server-side GTM migrations, bypassing third-party cookie restrictions, and speed benefits.">
+    <meta name="author" content="Shivam Joshi">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/insights.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <span class="logo-icon"><i class="fa-solid fa-chart-line"></i></span>
+                <span class="logo-text">Shivam<span>Joshi</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../about.html" class="nav-link">About</a></li>
+                    <li><a href="../work.html" class="nav-link">Work</a></li>
+                    <li><a href="../insights.html" class="nav-link active">Insights</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <a href="../assets/resume/Shivam_Joshi_Resume.pdf" target="_blank" class="btn btn-outline btn-sm nav-cta">Resume</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-bottom: 80px; padding-top: 40px;">
+        <article class="container" style="max-width: 800px;">
+            <!-- Breadcrumbs / Back button -->
+            <div style="margin-bottom: 30px;">
+                <a href="../insights.html" class="btn btn-outline btn-sm" style="gap: 8px;"><i class="fa-solid fa-arrow-left"></i> Back to Insights</a>
+            </div>
+            
+            <!-- Article Header -->
+            <div class="section-header" style="margin-bottom: 40px; text-align: left;">
+                <span class="insight-category" style="font-size: 12px; margin-bottom: 15px;">GTM</span>
+                <h1 style="font-family: var(--font-heading); font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 15px;">Why We Migrated from Client-Side to Server-Side GTM</h1>
+                <p style="color: var(--text-muted); font-size: 14px;"><i class="fa-solid fa-calendar-days" style="margin-right: 6px;"></i> Published June 2026 &nbsp;|&nbsp; <i class="fa-solid fa-clock" style="margin-right: 6px;"></i> 5 Min Read</p>
+            </div>
+
+            <!-- Content Area -->
+            <div class="glass" style="padding: 40px; line-height: 1.8; color: var(--text-muted); font-size: 16px;">
+                <p style="margin-bottom: 20px;">
+                    Client-side tracking is losing the battle against ad blockers, browser privacy restrictions (such as Apple's ITP), and regulatory privacy acts. Historically, we loaded JavaScript libraries directly on the browser and sent events directly to third-party endpoints. Today, this approach faces high data degradation rates.
+                </p>
+                <h3 style="font-family: var(--font-heading); color: var(--text-main); font-size: 20px; font-weight: 700; margin: 30px 0 15px;">The Core Advantages of Server-Side GTM</h3>
+                <p style="margin-bottom: 20px;">
+                    Moving to a server-side architecture (sGTM) means running a container in a cloud environment (like GCP or AWS) that acts as a proxy. The client-side code sends a single request stream to your custom domain endpoint, and the server distributes it to GA4, Facebook, and advertising partners.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    Key benefits include:
+                </p>
+                <ul style="margin-bottom: 20px; padding-left: 20px; list-style: disc;">
+                    <li style="margin-bottom: 8px;"><strong>Extended Cookie Lifetimes:</strong> Writing cookies in a first-party context bypasses ITP limits, maintaining conversion data accuracy.</li>
+                    <li style="margin-bottom: 8px;"><strong>Page Speed Performance:</strong> Running heavy third-party tag scripts in the cloud instead of the client's browser decreases CPU cycles and improves page load times.</li>
+                    <li style="margin-bottom: 8px;"><strong>Data Security and Sanitization:</strong> You control exactly what parameters are sent to destination platforms, removing PII (Personally Identifiable Information) before passing payloads.</li>
+                </ul>
+                <p>
+                    While configuring sGTM requires cloud node allocation and custom domain mapping, the resulting data reliability and site speed improvement are essential for any modern digital analytics strategy.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="../index.html" class="footer-logo">Shivam<span>Joshi</span></a>
+                <p>Ensuring data integrity and compliance in every event tracked.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../about.html">About</a>
+                    <a href="../work.html">Work</a>
+                    <a href="../insights.html">Insights</a>
+                    <a href="../contact.html">Contact</a>
+                </div>
+                <p class="copyright">&copy; <span id="current-year">2026</span> Shivam Joshi. All rights reserved. Crafted with care.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/global.js"></script>
+</body>
+</html>

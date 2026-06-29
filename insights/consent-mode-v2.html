@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementing Consent Mode v2 Without Breaking Your GA4 Data | Shivam Joshi</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A technical tutorial on setting up Google Consent Mode v2 via GTM and preserving conversion modeling accuracy.">
+    <meta name="author" content="Shivam Joshi">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/insights.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <span class="logo-icon"><i class="fa-solid fa-chart-line"></i></span>
+                <span class="logo-text">Shivam<span>Joshi</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../about.html" class="nav-link">About</a></li>
+                    <li><a href="../work.html" class="nav-link">Work</a></li>
+                    <li><a href="../insights.html" class="nav-link active">Insights</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <a href="../assets/resume/Shivam_Joshi_Resume.pdf" target="_blank" class="btn btn-outline btn-sm nav-cta">Resume</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-bottom: 80px; padding-top: 40px;">
+        <article class="container" style="max-width: 800px;">
+            <!-- Breadcrumbs / Back button -->
+            <div style="margin-bottom: 30px;">
+                <a href="../insights.html" class="btn btn-outline btn-sm" style="gap: 8px;"><i class="fa-solid fa-arrow-left"></i> Back to Insights</a>
+            </div>
+            
+            <!-- Article Header -->
+            <div class="section-header" style="margin-bottom: 40px; text-align: left;">
+                <span class="insight-category" style="font-size: 12px; margin-bottom: 15px;">Privacy and Consent</span>
+                <h1 style="font-family: var(--font-heading); font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 15px;">Implementing Consent Mode v2 Without Breaking Your GA4 Data</h1>
+                <p style="color: var(--text-muted); font-size: 14px;"><i class="fa-solid fa-calendar-days" style="margin-right: 6px;"></i> Published June 2026 &nbsp;|&nbsp; <i class="fa-solid fa-clock" style="margin-right: 6px;"></i> 6 Min Read</p>
+            </div>
+
+            <!-- Content Area -->
+            <div class="glass" style="padding: 40px; line-height: 1.8; color: var(--text-muted); font-size: 16px;">
+                <p style="margin-bottom: 20px;">
+                    Consent Mode v2 is now mandatory for advertisers serving European Union traffic to maintain core remarketing features and attribution in Google Ads and GA4. Setting it up correctly ensures compliance with the Digital Markets Act (DMA) while recovering gaps in user data.
+                </p>
+                <h3 style="font-family: var(--font-heading); color: var(--text-main); font-size: 20px; font-weight: 700; margin: 30px 0 15px;">Advanced parameters: ad_user_data & ad_personalization</h3>
+                <p style="margin-bottom: 20px;">
+                    Consent Mode v2 introduces two new key variables:
+                </p>
+                <ul style="margin-bottom: 20px; padding-left: 20px; list-style: disc;">
+                    <li style="margin-bottom: 8px;"><code>ad_user_data</code>: Determines whether user data can be sent to Google for advertising purposes.</li>
+                    <li style="margin-bottom: 8px;"><code>ad_personalization</code>: Controls whether personalized advertising (remarketing audiences) can be activated for the user.</li>
+                </ul>
+                <p style="margin-bottom: 20px;">
+                    These exist alongside the traditional <code>analytics_storage</code> and <code>ad_storage</code> settings.
+                </p>
+                <h3 style="font-family: var(--font-heading); color: var(--text-main); font-size: 20px; font-weight: 700; margin: 30px 0 15px;">Basic vs. Advanced Consent Mode</h3>
+                <p style="margin-bottom: 20px;">
+                    Under the <strong>Basic</strong> implementation, no tags fire until consent is granted. Under the <strong>Advanced</strong> implementation, tags fire prior to consent but send cookie-less pings. Google then uses machine learning to model conversions for the non-consenting users.
+                </p>
+                <p>
+                    Integrating GTM triggers with CMP interfaces like OneTrust or Cookiebot ensures that user options are captured immediately, safeguarding regulatory compliance without completely blinding analytics reports.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="../index.html" class="footer-logo">Shivam<span>Joshi</span></a>
+                <p>Ensuring data integrity and compliance in every event tracked.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../about.html">About</a>
+                    <a href="../work.html">Work</a>
+                    <a href="../insights.html">Insights</a>
+                    <a href="../contact.html">Contact</a>
+                </div>
+                <p class="copyright">&copy; <span id="current-year">2026</span> Shivam Joshi. All rights reserved. Crafted with care.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/global.js"></script>
+</body>
+</html>
