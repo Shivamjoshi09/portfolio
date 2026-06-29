@@ -1,0 +1,336 @@
+/* Availability / Open To Banner */
+.availability-section {
+    padding: 20px 0 60px;
+    position: relative;
+    z-index: 5;
+}
+
+.availability-card {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.availability-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary), #a18cd1);
+}
+
+.availability-content {
+    max-width: 700px;
+}
+
+.availability-status-pulse {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-green);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.pulse-ring {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--accent-green);
+    position: relative;
+}
+
+.pulse-ring::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--accent-green);
+    animation: pulseRing 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    left: 0;
+    top: 0;
+}
+
+@keyframes pulseRing {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+.availability-content h2 {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.availability-content p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.availability-action {
+    flex-shrink: 0;
+}
+
+/* Free Audit Callout Box */
+.audit-callout-box {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    border: 1px dashed rgba(var(--primary-rgb), 0.35);
+    background: rgba(var(--primary-rgb), 0.03);
+    z-index: 5;
+    position: relative;
+}
+
+[data-theme="light"] .audit-callout-box {
+    background: rgba(var(--primary-rgb), 0.02);
+}
+
+.audit-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary);
+    background: rgba(var(--primary-rgb), 0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    width: fit-content;
+}
+
+.badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    display: inline-block;
+}
+
+.audit-content {
+    max-width: 600px;
+}
+
+.audit-content h3 {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.audit-content p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.audit-cta-btn {
+    flex-shrink: 0;
+}
+
+/* Contact Section Grid & Elements */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 60px;
+    position: relative;
+    z-index: 5;
+}
+
+.contact-intro {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.contact-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.detail-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(var(--primary-rgb), 0.1);
+    border: 1px solid rgba(var(--primary-rgb), 0.2);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.detail-text h4 {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.detail-text a, .detail-text p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.detail-text a:hover {
+    color: var(--primary);
+}
+
+.contact-form-wrapper {
+    padding: 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 14px;
+    transition: color var(--transition-fast);
+}
+
+.textarea-icon {
+    top: 20px;
+    transform: none;
+}
+
+.input-wrapper input, .input-wrapper textarea {
+    width: 100%;
+    padding: 12px 15px 12px 42px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 14px;
+    transition: all var(--transition-fast);
+}
+
+[data-theme="light"] .input-wrapper input, [data-theme="light"] .input-wrapper textarea {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.input-wrapper input:focus, .input-wrapper textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: rgba(var(--primary-rgb), 0.02);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.input-wrapper input:focus + .input-icon, .input-wrapper textarea:focus + .input-icon {
+    color: var(--primary);
+}
+
+.loading-spinner {
+    display: none;
+}
+
+.form-submit-btn.loading .submit-text {
+    display: none;
+}
+
+.form-submit-btn.loading .loading-spinner {
+    display: inline-block;
+}
+
+/* Responsive Overrides for Contact Page */
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .availability-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+    .availability-action {
+        width: 100%;
+    }
+    .availability-action .btn {
+        width: 100%;
+    }
+    .audit-callout-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .audit-cta-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .contact-form-wrapper {
+        padding: 24px;
+    }
+    .availability-card {
+        padding: 24px;
+    }
+    .availability-content h2 {
+        font-size: 20px;
+    }
+    .audit-callout-box {
+        padding: 20px;
+        margin-bottom: 35px;
+    }
+    .audit-content h3 {
+        font-size: 18px;
+    }
+}
